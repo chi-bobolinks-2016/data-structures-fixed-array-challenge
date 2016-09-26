@@ -18,4 +18,5 @@ describe FixedArray do
   it "sets the value at an index of the array" do
     expect(my_array.set(0, "my element")).to eq "my element"
   end
+  
 end
