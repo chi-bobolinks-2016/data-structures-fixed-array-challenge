@@ -15,8 +15,16 @@ describe FixedArray do
     expect(my_array.get(0)).to eq nil
   end
 
+  it "raises an error if method tries to get from non-existing index" do
+    expect{ my_array.get(3) }.to raise_error(IndexOutOfBoundsError)
+  end
+
   it "sets the value at an index of the array" do
     expect(my_array.set(0, "my element")).to eq "my element"
   end
-  
+
+  it "raises an error if method tries to set at non-existing index" do
+    expect{ my_array.set(3, "error error") }.to raise_error(IndexOutOfBoundsError)
+  end
+
 end
